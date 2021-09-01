@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding">16dp</dimen>
+    <dimen name="padding_half">8dp</dimen>
+    <dimen name="padding_quarter">4dp</dimen>
+    <dimen name="padding_two_quarter">24dp</dimen>
+    <dimen name="padding_double">32dp</dimen>
+    <dimen name="recycler_bottom_padding">65dp</dimen>
+
+    <dimen name="tool_bar_height">76dp</dimen>
+    <dimen name="app_bar_height">56dp</dimen>
+
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_large">30sp</dimen>
+    <dimen name="text_extra_large">60sp</dimen>
+
+    <dimen name="image_large">120dp</dimen>
+    <dimen name="image_small_btn">36dp</dimen>
+
+</resources>

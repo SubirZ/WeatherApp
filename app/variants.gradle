@@ -1,0 +1,37 @@
+apply plugin: 'com.android.application'
+apply from: 'signing.gradle'
+
+android {
+    buildTypes {
+
+        debug {
+            debuggable true
+
+            versionNameSuffix '-debug'
+            applicationIdSuffix '.debug'
+            signingConfig signingConfigs.debug
+
+            resValue "string", "app_name", "WeatherApp Debug"
+            buildConfigField 'String', "API_BASE_URL", "\"${API_BASE_URL_DEV}\""
+            buildConfigField 'String', "WEATHER_API_KEY", "\"${WEATHER_API_KEY_DEV}\""
+            buildConfigField "boolean", "IS_DEBUG", "true"
+        }
+
+        release {
+            debuggable false
+            versionNameSuffix '-release'
+
+            minifyEnabled true
+            shrinkResources true
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-common.txt',
+                    'proguard-specific.txt'
+            signingConfig signingConfigs.release
+
+            resValue "string", "app_name", "WeatherApp"
+            buildConfigField 'String', "API_BASE_URL", "\"${API_BASE_URL_RELEASE}\""
+            buildConfigField 'String', "WEATHER_API_KEY", "\"${WEATHER_API_KEY_RELEASE}\""
+            buildConfigField "boolean", "IS_DEBUG", "false"
+        }
+    }
+}

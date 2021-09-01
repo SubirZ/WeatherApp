@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/padding"
+        android:paddingEnd="@dimen/padding"
+        android:paddingBottom="@dimen/padding_half">
+
+        <Space
+            android:id="@+id/top_space"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/padding_double"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/units_of_measure"
+            app:layout_constraintTop_toBottomOf="@id/top_space"
+            tools:layout_editor_absoluteX="24dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/imperial_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_actions_sheet_item"
+            android:paddingTop="@dimen/padding"
+            android:paddingBottom="@dimen/padding_double"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <TextView
+                android:id="@+id/imperial_title"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/imperial"
+                app:layout_constraintEnd_toStartOf="@id/imperial_selector_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/imperial_description"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_quarter"
+                android:text="@string/imperial_desc"
+                app:layout_constraintEnd_toEndOf="@id/imperial_title"
+                app:layout_constraintStart_toStartOf="@id/imperial_title"
+                app:layout_constraintTop_toBottomOf="@id/imperial_title" />
+
+            <ImageView
+                android:id="@+id/imperial_selector_img"
+                android:layout_width="@dimen/padding"
+                android:layout_height="@dimen/padding"
+                android:layout_marginEnd="@dimen/padding_half"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/metric_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_actions_sheet_item"
+            android:paddingTop="@dimen/padding"
+            android:paddingBottom="@dimen/padding_double"
+            app:layout_constraintTop_toBottomOf="@id/imperial_layout">
+
+            <TextView
+                android:id="@+id/metric_title"
+                style="@style/TextAppearance.AppCompat.Body1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/metric"
+                app:layout_constraintEnd_toStartOf="@id/metric_selector_img"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/metric_description"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_quarter"
+                android:text="@string/metric_desc"
+                app:layout_constraintEnd_toEndOf="@id/metric_title"
+                app:layout_constraintStart_toStartOf="@id/metric_title"
+                app:layout_constraintTop_toBottomOf="@id/metric_title" />
+
+            <ImageView
+                android:id="@+id/metric_selector_img"
+                android:layout_width="@dimen/padding"
+                android:layout_height="@dimen/padding"
+                android:layout_marginEnd="@dimen/padding_half"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="14dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/temp_cloudy"
+            android:paddingStart="@dimen/padding"
+            android:paddingTop="@dimen/padding_double"
+            android:paddingEnd="@dimen/padding"
+            android:paddingBottom="@dimen/padding_double">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_city_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toStartOf="@id/item_last_temperature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Mumbai" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_min_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_city_name"
+                tools:text="23*c" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_separator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="@dimen/padding_quarter"
+                android:paddingEnd="@dimen/padding_quarter"
+                android:text="@string/separator"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toEndOf="@id/item_min_temp"
+                app:layout_constraintTop_toBottomOf="@id/item_city_name" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_max_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toEndOf="@id/item_separator"
+                app:layout_constraintTop_toBottomOf="@id/item_city_name"
+                tools:text="28*c" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_last_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="42*C" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

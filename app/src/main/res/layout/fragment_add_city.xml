@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_back"
+            android:layout_width="@dimen/image_small_btn"
+            android:layout_height="@dimen/image_small_btn"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginTop="@dimen/padding_two_quarter"
+            android:padding="@dimen/padding_quarter"
+            android:tint="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_drag_marker_instruction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:paddingStart="@dimen/padding"
+            android:paddingTop="@dimen/padding"
+            android:paddingEnd="@dimen/padding"
+            android:text="@string/drag_marker_instruction"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintBottom_toTopOf="@id/card_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_location"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_marginEnd="@dimen/padding"
+            android:alpha=".65"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_add"
+            app:layout_constraintTop_toTopOf="@id/text_detected_city_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_detected_city_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:paddingStart="@dimen/padding"
+            android:paddingTop="@dimen/padding"
+            android:paddingEnd="@dimen/padding"
+            android:text="@string/detected_location"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintBottom_toTopOf="@id/text_detected_city"
+            app:layout_constraintStart_toStartOf="@id/card_location" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_detected_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:gravity="start"
+            android:padding="@dimen/padding"
+            android:text="@string/dash"
+            android:textSize="@dimen/text_medium"
+            app:layout_constraintBottom_toTopOf="@id/btn_add"
+            app:layout_constraintEnd_toEndOf="@id/card_location"
+            app:layout_constraintStart_toStartOf="@id/card_location"
+            tools:text="Raipur" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padding"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/add_new_city"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

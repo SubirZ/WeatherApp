@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/favouritesFragment">
+
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.example.weatherapp.ui.favourites.FavouritesFragment"
+        android:label="FavouritesFragment"
+        tools:layout="@layout/fragment_favourites">
+        <action
+            android:id="@+id/action_favourites_to_city"
+            app:destination="@id/cityFragment" />
+        <action
+            android:id="@+id/action_favourites_to_addCity"
+            app:destination="@id/addCityFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="com.example.weatherapp.ui.city.CityFragment"
+        android:label="CityFragment"
+        tools:layout="@layout/fragment_city">
+
+        <argument
+            android:name="cityId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+
+        <argument
+            android:name="latitude"
+            android:defaultValue="0.0"
+            app:argType="string" />
+
+        <argument
+            android:name="longitude"
+            android:defaultValue="0.0"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addCityFragment"
+        android:name="com.example.weatherapp.ui.addcity.AddCityFragment"
+        android:label="AddCityFragment"
+        tools:layout="@layout/fragment_add_city">
+
+        <action
+            android:id="@+id/action_addCityFragment_to_cityFragment"
+            app:destination="@id/cityFragment"
+            app:popUpTo="@id/favouritesFragment"/>
+    </fragment>
+</navigation>

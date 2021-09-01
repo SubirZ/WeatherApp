@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_forecast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/parentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/temp_super_hot"
+            android:padding="@dimen/padding">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="@dimen/text_medium"
+                app:layout_constraintEnd_toStartOf="@id/item_temperature"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Wed, 12 spet" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_date"
+                tools:text="humidity" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_wind_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingStart="@dimen/padding_quarter"
+                android:paddingEnd="@dimen/padding_quarter"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toEndOf="@id/item_humidity"
+                app:layout_constraintEnd_toStartOf="@id/item_temperature"
+                app:layout_constraintTop_toBottomOf="@id/item_date"
+                tools:text="wind speed" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_rain_chances"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/item_wind_speed"
+                tools:text="rain chances" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/item_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="42*C" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

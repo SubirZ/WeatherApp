@@ -1,0 +1,28 @@
+<resources>
+
+    <string name="add_new_city">add new city</string>
+    <string name="real_feel">Real Feel</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure">Pressure</string>
+    <string name="rain_chances">Rain Chances</string>
+    <string name="dash">--</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="drag_marker_instruction">Hold &amp; Drag the marker to change the location \n Double tap to zoom in</string>
+    <string name="detected_location">detected location</string>
+    <string name="separator">/</string>
+    <string name="locations">Locations</string>
+    <string name="settings">settings</string>
+    <string name="kelvin">kelvin</string>
+    <string name="celsius">celsius</string>
+    <string name="temperature_unit">Temperature Unit</string>
+    <string name="no_internet">No Internet Connection</string>
+    <string name="empty_desc">Click on Add New City button at the bottom to add a new location</string>
+    <string name="units_of_measure">Units of Measure</string>
+    <string name="imperial">Imperial</string>
+    <string name="imperial_desc">°C, m/h</string>
+    <string name="metric">Metric</string>
+    <string name="metric_desc">K, KM/h</string>
+    <string name="forecast_label">7 day forecast</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+</resources>

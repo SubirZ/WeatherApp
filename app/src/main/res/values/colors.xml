@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#14B36D</color>
+    <color name="colorPrimaryDark">#0ba360</color>
+    <color name="colorAccent">#2a6cb2</color>
+
+    <color name="temp_super_hot">#F44336</color>
+    <color name="temp_hot">#FF6D6D</color>
+    <color name="temp_warmer">#FFCC80</color>
+    <color name="temp_warm">#FFEA63</color>
+    <color name="temp_breeze">#8Bd0CD</color>
+    <color name="temp_cool">#8EF6FE</color>
+    <color name="temp_ice">#29B6F6</color>
+    <color name="temp_cloudy">#4B595D</color>
+
+</resources>

@@ -1,0 +1,19 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'WeatherAppRelease'
+            keyPassword 'weatherApp'
+            storeFile file('keystore/weather-app-release.jks')
+            storePassword 'weatherApp'
+        }
+
+        debug {
+            keyAlias 'WeatherAppDebug'
+            keyPassword 'weatherApp'
+            storeFile file('keystore/weather-app-debug.jks')
+            storePassword 'weatherApp'
+        }
+    }
+}

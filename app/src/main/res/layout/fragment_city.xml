@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/temp_breeze">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_half"
+                android:textSize="@dimen/text_large"
+                tools:text="Raipur" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dash"
+                android:textSize="@dimen/text_extra_large"
+                tools:text="45*c" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_weather"
+                android:layout_width="@dimen/image_large"
+                android:layout_height="@dimen/image_large"
+                android:scaleType="centerCrop" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_weather"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_half"
+                android:paddingBottom="@dimen/padding"
+                android:text="@string/dash"
+                android:textSize="@dimen/text_medium"
+                tools:text="Cloudy" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/padding">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_weather_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/padding"
+                    android:layout_marginEnd="@dimen/padding"
+                    android:alpha=".65"
+                    app:cardCornerRadius="10dp"
+                    app:layout_constraintBottom_toBottomOf="@id/text_wind_speed"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_real_feel_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:paddingEnd="@dimen/padding"
+                    android:text="@string/real_feel"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintStart_toStartOf="@id/card_weather_info"
+                    app:layout_constraintTop_toTopOf="@id/card_weather_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_real_feel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:padding="@dimen/padding"
+                    android:text="@string/dash"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="@id/card_weather_info"
+                    app:layout_constraintTop_toBottomOf="@id/text_real_feel_label"
+                    tools:text="45*c" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_humidity_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:paddingEnd="@dimen/padding"
+                    android:text="@string/humidity"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintStart_toStartOf="@id/card_weather_info"
+                    app:layout_constraintTop_toBottomOf="@id/text_real_feel" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:padding="@dimen/padding"
+                    android:text="@string/dash"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="@id/card_weather_info"
+                    app:layout_constraintTop_toBottomOf="@id/text_humidity_label"
+                    tools:text="52%" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_wind_speed_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:paddingEnd="@dimen/padding"
+                    android:text="@string/wind_speed"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintStart_toStartOf="@id/card_weather_info"
+                    app:layout_constraintTop_toBottomOf="@id/text_humidity" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_wind_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:padding="@dimen/padding"
+                    android:text="@string/dash"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintStart_toStartOf="@id/card_weather_info"
+                    app:layout_constraintTop_toBottomOf="@id/text_wind_speed_label"
+                    tools:text="16.9km/h" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_pressure_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:paddingEnd="@dimen/padding"
+                    android:text="@string/pressure"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="@id/card_weather_info"
+                    app:layout_constraintStart_toEndOf="@id/guide_mid"
+                    app:layout_constraintTop_toTopOf="@id/card_weather_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_pressure"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:padding="@dimen/padding"
+                    android:text="@string/dash"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@id/card_weather_info"
+                    app:layout_constraintStart_toEndOf="@id/guide_mid"
+                    app:layout_constraintTop_toBottomOf="@id/text_pressure_label"
+                    tools:text="1005.00hPa" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_rain_chances_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:paddingStart="@dimen/padding"
+                    android:paddingTop="@dimen/padding"
+                    android:paddingEnd="@dimen/padding"
+                    android:text="@string/rain_chances"
+                    android:textSize="@dimen/text_small"
+                    app:layout_constraintEnd_toEndOf="@id/card_weather_info"
+                    app:layout_constraintStart_toEndOf="@id/guide_mid"
+                    app:layout_constraintTop_toBottomOf="@id/text_pressure" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_rain_chances"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:elevation="2dp"
+                    android:padding="@dimen/padding"
+                    android:text="@string/dash"
+                    android:textSize="@dimen/text_medium"
+                    app:layout_constraintEnd_toEndOf="@id/card_weather_info"
+                    app:layout_constraintStart_toEndOf="@id/guide_mid"
+                    app:layout_constraintTop_toBottomOf="@id/text_rain_chances_label"
+                    tools:text="46%" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guide_mid"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".4" />
+
+                <include
+                    android:id="@+id/loader"
+                    layout="@layout/layout_loading" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_forecast_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:text="@string/forecast_label"
+                android:textSize="@dimen/text_medium" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_forecast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/padding_half"
+                android:paddingEnd="@dimen/padding_half"
+                android:clipToPadding="false"
+                android:paddingTop="@dimen/padding_quarter"
+                android:paddingBottom="@dimen/recycler_bottom_padding"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:itemCount="10"
+                tools:listitem="@layout/item_forecast" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
