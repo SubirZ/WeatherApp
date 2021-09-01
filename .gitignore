@@ -17,3 +17,5 @@
 .project
 .settings
 .classpath
+/.idea/
+/gradle/
